@@ -1,0 +1,24 @@
+NODE PART :
+9:48
+Question 1 :
+create Dockerfile   located in the same folder with package.json and server.js
+write these instructions in the Dockerfile :
+9:49
+FROM node
+WORKDIR  /app
+COPY . /app
+RUN npm install
+EXPOSE 3000
+CMD [ "node","server.js" ]
+9:50
+then we are gonna build the image for the app with this command :
+$ docker build .
+
+
+Aziz Mrabet
+  9:56 AM
+Question 2 :
+$ docker run -p 30005:3000 2d40b62e0da7
+10:00
+if we wanna check the container :
+$ docker ps -a
